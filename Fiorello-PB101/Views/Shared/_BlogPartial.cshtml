@@ -4,10 +4,11 @@
     @foreach (var item in Model)
     {
         <div class="col-md-6 col-lg-4">
-            <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">
                 <div class="item">
                     <div class="img position-relative">
+                        <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">
                         <img src="~/img/@item.Image" class="img-fluid" alt="">
+                        </a>
                         <div class="date rounded bg-light position-absolute py-1 px-2">
                             <span>@item.CreatedDate</span>
                         </div>
@@ -17,7 +18,6 @@
                         <p class="text-black-50">@item.Description</p>
                     </div>
                 </div>
-            </a>
         </div>
     }
                    
